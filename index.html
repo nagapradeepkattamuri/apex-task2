@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APEX TASK2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h2 class="heading"><B>APEX TASK2</B></h2>
+  <nav class="navbar">
+    <button onclick="showSection('formSection')">Contact form</button>
+    <button onclick="showSection('framesSection')">Image gallery</button>
+  </nav>
+
+  <section id="formSection" class="section">
+    <div class="container">
+      <h1><B>CONTACT FORM</B></h1>
+      <div class="profile">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="profile picture" class="image" />
+      </div>
+      <form id="userForm">
+        <div class="info">
+          <div class="user">
+            <label for="username"><strong>Username:</strong></label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required />
+          </div>
+          <div class="gmail">
+            <label for="email"><strong>Gmail ID:</strong></label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required />
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section id="framesSection" class="section" style="display:none;">
+    <h1><B>IMAGE GALLERY</B></h1>
+    <h3>FOR MY SUPERHEROS</h3>
+    <button onclick="addPic()">+ Add</button>
+    <input type="file" id="imageInput" accept="image/*" style="display: none;" />
+    <div class="container cards-container">
+      <div class="card">
+        <img src="https://res.cloudinary.com/dngsc2b0b/image/upload/v1747371458/spiderman_odmjnz.jpg">
+        <h3>SPIDERMAN</h3>
+        <button onclick="deleteElement(this)">delete</button>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
